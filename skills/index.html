@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>클로드 코드 스킬 5개 설치 방법</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#0B0F17;--panel:#141A25;--line:#2A3344;--ink:#F4F6FA;--mute:#98A2B3;--accent:#C6F432}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;padding:28px 16px 48px;max-width:640px;margin:0 auto;word-break:keep-all}
+h1{font-size:26px;line-height:1.3;margin-bottom:8px} h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--mute);font-size:15px;margin-bottom:24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px}
+.card h2{font-size:20px;display:flex;gap:10px;align-items:center} .card h2 b{background:var(--accent);color:var(--bg);border-radius:8px;padding:0 9px;font-size:15px}
+.card a{color:var(--mute);font-size:14px;display:inline-block;margin:6px 0 10px;overflow-wrap:anywhere}
+.card p{font-size:15px;color:#D5DBE5;margin-bottom:10px}
+.cmd{display:flex;gap:8px;align-items:stretch;margin-top:8px}
+.cmd code{flex:1;background:#0B0F17;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-family:Consolas,Menlo,monospace;font-size:13px;overflow-wrap:anywhere;color:#E3E8F0}
+.cmd button{flex:none;background:var(--accent);color:var(--bg);border:0;border-radius:10px;padding:0 14px;font-weight:700;font-size:14px;cursor:pointer;min-height:44px}
+.foot{color:#5D6779;font-size:13px;margin-top:22px}
+</style>
+</head>
+<body>
+<h1>클로드 코드 <em>스킬 5개</em> 설치 방법</h1>
+<p class="sub">2026년 11월 10일, 각 저장소 안내를 보고 정리했어요. 깔기 전에 저장소에서 라이선스와 안내를 한 번 더 확인해 주세요.</p>
+
+<div class="card"><h2><b>1</b>UI UX Pro Max</h2>
+<a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" rel="noopener">github.com/nextlevelbuilder/ui-ux-pro-max-skill</a>
+<p>화면 디자인 규칙(스타일·색·글꼴·UX)을 찾아 주는 스킬. MIT</p>
+<div class="cmd"><code>npm install -g ui-ux-pro-max-cli</code><button>복사</button></div>
+<div class="cmd"><code>uipro init --ai claude</code><button>복사</button></div></div>
+
+<div class="card"><h2><b>2</b>Graphify</h2>
+<a href="https://github.com/Graphify-Labs/graphify" rel="noopener">github.com/Graphify-Labs/graphify</a>
+<p>코드를 연결 지도로 만들어 물어볼 수 있게 해 줘요. 패키지 이름은 y 가 두 개(graphifyy)예요. Apache-2.0</p>
+<div class="cmd"><code>uv tool install graphifyy</code><button>복사</button></div>
+<div class="cmd"><code>graphify install</code><button>복사</button></div></div>
+
+<div class="card"><h2><b>3</b>Agent Skills</h2>
+<a href="https://github.com/addyosmani/agent-skills" rel="noopener">github.com/addyosmani/agent-skills</a>
+<p>개발 단계별 작업법 25개. 클로드 코드 안에서 입력해요. MIT</p>
+<div class="cmd"><code>/plugin marketplace add addyosmani/agent-skills</code><button>복사</button></div>
+<div class="cmd"><code>/plugin install agent-skills@addy-agent-skills</code><button>복사</button></div></div>
+
+<div class="card"><h2><b>4</b>Taste Skill</h2>
+<a href="https://github.com/Leonxlnx/taste-skill" rel="noopener">github.com/Leonxlnx/taste-skill</a>
+<p>홈페이지가 흔한 AI 페이지처럼 보이지 않게 잡아 줘요. MIT</p>
+<div class="cmd"><code>npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"</code><button>복사</button></div></div>
+
+<div class="card"><h2><b>5</b>Impeccable</h2>
+<a href="https://github.com/pbakaus/impeccable" rel="noopener">github.com/pbakaus/impeccable</a>
+<p>화면 다듬기(polish·bolder)와 점검(audit) 명령. 프로젝트 폴더에서 실행해요. Apache-2.0</p>
+<div class="cmd"><code>npx impeccable install</code><button>복사</button></div></div>
+
+<p class="foot">각 스킬은 만든 사람의 것이고 우리와 제휴가 없어요. @ai._.moneylab</p>
+<script>
+document.querySelectorAll('.cmd button').forEach(b=>b.addEventListener('click',async()=>{
+  const t=b.previousElementSibling.innerText;
+  try{await navigator.clipboard.writeText(t);b.textContent='복사됨'}catch(e){b.textContent='길게 눌러 복사'}
+  setTimeout(()=>b.textContent='복사',1500)}));
+</script>
+</body>
+</html>
