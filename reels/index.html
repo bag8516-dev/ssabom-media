@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>릴스 정리 명령 3줄</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#0D1530;--panel:#16213F;--line:#2B3A63;--ink:#F4F6FA;--mute:#A3AECB;--accent:#FF8A1F;--warm:#FFD24A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6;word-break:keep-all;
+ background-image:radial-gradient(600px 400px at 100% 0,rgba(255,138,31,.14),transparent 60%)}
+.wrap{max-width:640px;margin:0 auto;padding:36px 16px 56px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:3px 12px;margin-bottom:14px}
+h1{font-size:30px;line-height:1.28;font-weight:800;letter-spacing:-.02em} h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--mute);font-size:15px;margin:12px 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:18px}
+.shot{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);background:#000}
+.body{padding:18px 18px 20px}
+.head{display:flex;align-items:center;gap:10px} .head b{background:var(--accent);color:var(--bg);border-radius:8px;padding:1px 9px;font-size:15px}
+.head h2{font-size:22px;font-weight:800;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px} .meta span{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:#D5DBE5}
+.meta .star{color:var(--accent);border-color:rgba(255,138,31,.5)}
+.body p{font-size:15px;color:#D5DBE5;margin-bottom:6px}
+.step{font-size:13px;color:var(--mute);margin:12px 0 6px;font-weight:700}
+.cmd{display:flex;gap:8px;align-items:stretch;margin-top:6px}
+.cmd code{flex:1;min-width:0;background:#0A1024;border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-family:Consolas,Menlo,monospace;font-size:13px;overflow-wrap:anywhere;color:#E3E8F0}
+.cmd button{flex:none;background:var(--accent);color:var(--bg);border:0;border-radius:12px;padding:0 14px;font-weight:800;font-size:14px;cursor:pointer;min-height:44px;font-family:inherit}
+.note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warm);border-radius:14px;padding:14px 16px;font-size:14px;color:#D5DBE5;margin-bottom:18px}
+.repo{display:inline-block;margin-top:12px;font-size:13px;color:var(--mute);overflow-wrap:anywhere}
+.foot{color:#6B7699;font-size:13px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body><div class="wrap">
+<span class="tag">@ai._.moneylab 정리</span>
+<h1>릴스 한 편을<br><em>장면판 한 장으로</em></h1>
+<p class="sub">윈도우 기준이에요. 처음 한 번 깔고, 그다음부터는 '쓰기' 줄만 바꿔 쓰면 돼요. 30초짜리 쇼츠로 우리 PC 에서 6.3초 걸렸어요(2026년 11월 12일).</p>
+
+<div class="card"><img class="shot" src="img/r1.jpg" alt="받은 쇼츠의 한 장면"><div class="body">
+<div class="head"><b>1</b><h2>yt-dlp · 영상 받기</h2></div>
+<div class="meta"><span class="star">★ 20.7만</span><span>Unlicense</span><span>무료</span></div>
+<p>공개 영상 주소 하나로 영상과 캡션 글을 받아요.</p>
+<div class="step">깔기 (처음 한 번)</div>
+<div class="cmd"><code>winget install yt-dlp.yt-dlp</code><button>복사</button></div>
+<div class="step">쓰기 (주소만 바꿔서)</div>
+<div class="cmd"><code>yt-dlp --write-description -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" -o short.mp4 영상주소</code><button>복사</button></div>
+<a class="repo" href="https://github.com/yt-dlp/yt-dlp" rel="noopener">github.com/yt-dlp/yt-dlp</a></div></div>
+
+<div class="card"><img class="shot" src="img/r2.jpg" alt="장면 16장을 모은 장면판"><div class="body">
+<div class="head"><b>2</b><h2>FFmpeg · 장면판 만들기</h2></div>
+<div class="meta"><span class="star">★ 6.7만</span><span>LGPL</span><span>무료</span></div>
+<p>영상 길이를 16칸으로 나눠 한 장에 펼쳐요. 아래 명령의 30 자리에 영상 길이(초)를 넣으세요.</p>
+<div class="step">깔기 (처음 한 번)</div>
+<div class="cmd"><code>winget install Gyan.FFmpeg</code><button>복사</button></div>
+<div class="step">쓰기</div>
+<div class="cmd"><code>ffmpeg -i short.mp4 -vf "fps=16/30,scale=270:-1,tile=4x4" -frames:v 1 sheet.jpg</code><button>복사</button></div>
+<a class="repo" href="https://github.com/FFmpeg/FFmpeg" rel="noopener">github.com/FFmpeg/FFmpeg</a></div></div>
+
+<div class="card"><img class="shot" src="img/r3.jpg" alt="클로드 코드에 정리를 부탁한 화면"><div class="body">
+<div class="head"><b>3</b><h2>Claude Code · 보고 확인하기</h2></div>
+<div class="meta"><span class="star">★ 15.5만</span><span>유료 구독</span></div>
+<p>장면판과 캡션을 읽고 정리해요. 릴스가 말한 숫자를 깃허브에서 직접 대조하게 시킬 수 있어요.</p>
+<div class="step">깔기 (처음 한 번, Pro 구독 이상)</div>
+<div class="cmd"><code>winget install Anthropic.ClaudeCode</code><button>복사</button></div>
+<div class="step">클로드 코드 입력창에서</div>
+<div class="cmd"><code>sheet.jpg 랑 short.description 보고 무슨 내용인지 정리하고, 나온 숫자가 맞는지 확인해 줘</code><button>복사</button></div>
+<a class="repo" href="https://github.com/anthropics/claude-code" rel="noopener">github.com/anthropics/claude-code</a></div></div>
+
+<div class="note">받은 영상은 공부용으로만 써 주세요. 다시 올리면 저작권 문제가 생겨요. 로그인해야 보이는 영상은 받지 않아요. 인스타 캐러셀의 사진 장은 yt-dlp 로 받아지지 않았어요.</div>
+
+<p class="foot">각 도구는 만든 사람의 것이고 우리와 제휴가 없어요.<br>깔기 전에 저장소에서 라이선스와 안내를 한 번 더 확인해 주세요.</p>
+</div>
+<script>
+document.querySelectorAll('.cmd button').forEach(b=>b.addEventListener('click',async()=>{
+  const t=b.previousElementSibling.innerText;
+  try{await navigator.clipboard.writeText(t);b.textContent='복사됨'}catch(e){b.textContent='길게 눌러 복사'}
+  setTimeout(()=>b.textContent='복사',1500)}));
+</script>
+</body>
+</html>
