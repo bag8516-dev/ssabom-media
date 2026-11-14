@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D 미니 사무실 만드는 프롬프트</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#0B0F17;--panel:#141A25;--line:#2A3344;--ink:#F4F6FA;--mute:#98A2B3;--accent:#C6F432;--warm:#FF7A3D}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6;word-break:keep-all;
+ background-image:radial-gradient(600px 400px at 100% 0,rgba(198,244,50,.10),transparent 60%)}
+.wrap{max-width:640px;margin:0 auto;padding:36px 16px 56px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:3px 12px;margin-bottom:14px}
+h1{font-size:30px;line-height:1.28;font-weight:800;letter-spacing:-.02em} h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--mute);font-size:15px;margin:12px 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:18px}
+.shot{display:block;width:100%;height:auto;border-bottom:1px solid var(--line);background:#000}
+.body{padding:18px 18px 20px}
+.head{display:flex;align-items:center;gap:10px;margin-bottom:8px} .head b{background:var(--accent);color:var(--bg);border-radius:8px;padding:1px 9px;font-size:15px}
+.head h2{font-size:21px;font-weight:800;letter-spacing:-.01em}
+.body p,.body li{font-size:15px;color:#D5DBE5;margin-bottom:6px} .body ul{padding-left:18px}
+.body a{color:var(--accent)}
+pre{background:#0B0F17;border:1px solid var(--line);border-radius:12px;padding:12px;font-family:Consolas,Menlo,monospace;font-size:12.5px;white-space:pre-wrap;overflow-wrap:anywhere;color:#E3E8F0;max-height:300px;overflow:auto;margin:10px 0}
+button{width:100%;background:var(--accent);color:var(--bg);border:0;border-radius:12px;font-weight:800;font-size:16px;cursor:pointer;min-height:48px;font-family:inherit}
+.foot{color:#5D6779;font-size:13px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body><div class="wrap">
+<span class="tag">@ai._.moneylab 가이드</span>
+<h1>말로 시켜서 만드는<br><em>3D 미니 사무실</em></h1>
+<p class="sub">아래 글을 복사해서 AI에게 붙여 넣으면 파일 하나가 나와요. 그 파일을 브라우저로 열면 사무실이 보여요.</p>
+
+<div class="card"><img class="shot" src="sample.png" alt="프롬프트 하나로 만든 3D 미니 사무실. 책상 묶음 둘, 유리방, 회의 탁자, 소파가 있고 직원 머리 위에 이름표가 떠 있다"><div class="body">
+<p>이 그림은 2026년 11월 15일, 새 대화에서 아래 글 하나만 주고 Claude Code가 만든 결과를 그대로 찍은 거예요. 영상에 나온 우리 사무실은 여기서 가구와 층을 더 붙인 거고요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>1</b><h2>프롬프트 복사</h2></div>
+<pre id="p">three.js 로 파일 하나(index.html)짜리 3D 미니 사무실을 만들어 줘. 설치 없이 브라우저에서 파일을 열면 바로 보여야 해.
+
+보는 방식
+- 원근 없는 카메라(OrthographicCamera)로 비스듬히 위에서 내려다보는 시점. 카메라는 고정.
+- 인형의 집처럼 앞쪽 벽 두 면을 떼고 뒤쪽 벽 두 면과 바닥만 보이게.
+- 창 크기가 바뀌어도 방 전체가 화면에 들어오게.
+
+방 안
+- 가로 9, 세로 6 정도 되는 방. 바닥은 밝은 회색, 벽은 흰색, 벽 위쪽에 진한 색 띠 한 줄.
+- 책상 묶음 둘: 뒷벽 앞에 책상 3개가 나란히, 왼쪽 벽 앞에 책상 2개. 책상마다 모니터와 의자.
+- 뒤 왼쪽 구석에 유리벽으로 막은 작은 방 하나와 책상 하나.
+- 가운데에 둥근 회의 탁자와 의자 3개, 오른쪽 앞에 소파와 낮은 탁자, 구석에 화분.
+- 뒷벽에 회사 이름 간판(캔버스에 글자를 그려서 붙이기).
+- 가구는 전부 상자·원통·공으로 직접 만들고 바깥 모델 파일은 쓰지 마. 모서리는 둥글게, 색은 파스텔로 아기자기하게.
+- 부드러운 그림자를 켜고, 모니터 화면은 은은하게 빛나면서 조금씩 깜박이게.
+
+직원
+- 파일 맨 위에 직원 목록을 배열로 둬: 이름, 상태(ok, work, wait, off), 자리 번호. 내가 이 배열만 고치면 화면이 바뀌어야 해.
+- 직원은 머리가 큰 작은 사람 모양. 책상 직원은 의자에 앉아 있고 고개를 가끔 까딱여.
+- 상태가 off 면 그 직원은 안 보이고 그 자리 모니터도 꺼져.
+- 직원 한 명은 '걷는 직원'으로 정해서, 상태가 ok 나 work 일 때는 가구를 피해 통로를 따라 방을 한 바퀴씩 걷고, wait 일 때는 소파에 앉아 있게.
+- 머리 위에 이름표와 상태 표시를 HTML 로 얹어 줘(3D 글자 말고). ok 는 초록 ✓, work 는 주황 …, wait 는 회색 z. 걷는 직원의 이름표는 따라다녀야 해.
+
+지킬 것
+- three.js 는 CDN 에서 버전을 정해서 불러와(import map 사용).
+- 다 만든 뒤에 파일을 직접 열어 보고, 글자가 겹치거나 사람이 가구를 뚫고 지나가면 고쳐 줘.
+- 회사 이름은 "우리 회사"로 넣어 두고, 바꾸는 곳을 주석으로 알려 줘.</pre>
+<button id="c">프롬프트 복사</button></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>2</b><h2>AI에게 붙여 넣기</h2></div>
+<p>우리는 Claude Code에서 돌렸어요. 5분쯤 걸려서 index.html 파일 하나가 나왔어요.</p>
+<p>코드를 써 주는 다른 AI에 넣어도 되는데, 그건 우리가 돌려 보지 않았어요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>3</b><h2>열어 보고 고치기</h2></div>
+<ul>
+<li>나온 index.html 을 크롬이나 엣지로 열어요. 인터넷이 연결돼 있어야 해요.</li>
+<li>파일 맨 위 직원 목록에서 이름과 상태를 바꾸면 화면이 따라 바뀌어요.</li>
+<li>마음에 안 드는 곳은 그림을 보여 주면서 말로 고쳐 달라고 하면 돼요. 우리도 "학교 같다"는 한마디로 책상 배치를 바꿨어요.</li>
+</ul></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>+</b><h2>가구를 진짜처럼</h2></div>
+<p>영상 속 책상·소파·사람은 Kenney가 저작권 없이(CC0) 풀어 둔 묶음이에요. 받아서 "이 모델로 가구를 바꿔 줘"라고 하면 돼요.</p>
+<p><a href="https://kenney.nl/assets/furniture-kit" rel="noopener">kenney.nl/assets/furniture-kit</a> (가구 140개)<br><a href="https://kenney.nl/assets/mini-characters-1" rel="noopener">kenney.nl/assets/mini-characters-1</a> (사람, 걷는 동작 포함)</p></div></div>
+
+<p class="foot">AI가 만드는 결과는 돌릴 때마다 조금씩 달라요. 위 그림과 똑같이 나오지는 않아요.<br>Kenney와 우리는 제휴가 없어요.</p>
+</div>
+<script>
+const b=document.getElementById('c');
+b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('p').innerText);b.textContent='복사됨'}catch(e){b.textContent='위 글을 길게 눌러 복사'}
+  setTimeout(()=>b.textContent='프롬프트 복사',1500)});
+</script>
+</body>
+</html>
