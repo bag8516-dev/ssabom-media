@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11월 16일 AI 깃허브 TOP5 설치·사용 가이드</title>
+<meta name="robots" content="noindex">
+<meta name="guide-day" content="2026-11-16">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>:root{--bg:#0B0F17;--panel:#141A25;--line:#2A3344;--ink:#F4F6FA;--mute:#98A2B3;--accent:#FFC83D}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6;word-break:keep-all}
+.wrap{max-width:640px;margin:0 auto;padding:36px 16px 56px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:3px 12px;margin-bottom:14px}
+h1{font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.02em} h1 em{font-style:normal;color:var(--accent)}
+.sub{color:var(--mute);font-size:15px;margin:12px 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 18px 20px;margin-bottom:18px}
+.head{display:flex;align-items:center;gap:10px} .head b{background:var(--accent);color:var(--bg);border-radius:8px;padding:1px 9px;font-size:15px}
+.head h2{font-size:21px;font-weight:800}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px} .meta span{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:#D5DBE5}
+.card p{font-size:15px;color:#D5DBE5;margin-bottom:6px} .use b{color:var(--accent)}
+.step{font-size:13px;color:var(--mute);margin:14px 0 6px;font-weight:700}
+.cmd{display:flex;gap:8px;align-items:stretch;margin-top:6px}
+.cmd code{flex:1;background:#0B0F17;border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-family:Consolas,Menlo,monospace;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere;color:#E3E8F0}
+.cmd button{flex:none;background:var(--accent);color:var(--bg);border:0;border-radius:12px;padding:0 14px;font-weight:800;font-size:14px;cursor:pointer;min-height:44px;font-family:inherit}
+.repo{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:var(--accent);overflow-wrap:anywhere}
+.note{border:1px solid var(--line);border-radius:16px;padding:14px 16px;color:var(--mute);font-size:13px;margin:22px 0}
+.days a{color:#D5DBE5;font-size:14px;margin-right:12px} .foot{color:#5D6779;font-size:13px;margin-top:26px;text-align:center}</style>
+</head>
+<body><div class="wrap">
+<span class="tag">@ai._.moneylab 가이드</span>
+<h1>11월 16일<br><em>AI 깃허브 TOP5</em> 설치·사용 가이드</h1>
+<p class="sub">영상에서 소개한 순서예요. 명령어 옆 복사를 누르면 복사돼요.</p>
+<div class="card"><div class="head"><b>1</b><h2>Univer</h2></div><div class="meta"><span>내 앱에 넣는 오피스</span><span>Apache-2.0</span><span>★ 25,599</span></div><p>엑셀 같은 표 편집기를 내 서비스에 넣어 줘요. 사람도 AI 에이전트도 같이 쓸 수 있어요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 내 앱에 스프레드시트 편집기를 넣어 표를 고치게 해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>pnpm add @univerjs/presets @univerjs/preset-sheets-core</code><button>복사</button></div><div class="cmd"><code>&lt;div id=&quot;app&quot; style=&quot;height: 100vh&quot;&gt;&lt;/div&gt;</code><button>복사</button></div><a class="repo" href="https://github.com/dream-num/univer" rel="noopener">github.com/dream-num/univer 설명서 열기</a></div>
+<div class="card"><div class="head"><b>2</b><h2>chrome-devtools-mcp</h2></div><div class="meta"><span>AI가 크롬 조종</span><span>Apache-2.0</span><span>★ 56,908</span></div><p>AI 코딩 도우미가 진짜 크롬 창을 열어 봐요. 화면을 찍고 느려지는 이유도 찾아 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 코딩 에이전트가 켜져 있는 크롬 창을 조종하고 살펴봐요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>{
+  &quot;mcpServers&quot;: {
+    &quot;chrome-devtools&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;chrome-devtools-mcp@latest&quot;]
+    }
+  }
+}</code><button>복사</button></div><div class="cmd"><code>npm i chrome-devtools-mcp@latest -g
+# Example for Claude Code. Use the skills directory of your agent.
+mkdir -p ~/.claude/skills
+cp -R &quot;$(npm root -g)/chrome-devtools-mcp/skills/chrome-devtools-cli&quot; ~/.claude/skills/</code><button>복사</button></div><a class="repo" href="https://github.com/ChromeDevTools/chrome-devtools-mcp" rel="noopener">github.com/ChromeDevTools/chrome-devtools-mcp 설명서 열기</a></div>
+<div class="card"><div class="head"><b>3</b><h2>Claude Trading Skills</h2></div><div class="meta"><span>투자 점검 도우미</span><span>MIT</span><span>★ 5,532</span></div><p>시장 점검과 위험 관리를 정리해 줘요. 사고팔 결정은 직접 내려야 해요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 시장 점검과 매매 계획, 일지를 차례대로 정리해요</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/tradermonty/claude-trading-skills" rel="noopener">github.com/tradermonty/claude-trading-skills 설명서 열기</a></div>
+<div class="card"><div class="head"><b>4</b><h2>AG-UI</h2></div><div class="meta"><span>AI와 앱을 잇는 약속</span><span>MIT</span><span>★ 17,840</span></div><p>AI 에이전트를 사람이 쓰는 앱 화면에 이어 줘요. 둘이 주고받는 방식을 정한 공통 약속이에요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 채팅 화면에 에이전트 답이 실시간으로 흘러 나오게 해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npx create-ag-ui-app my-agent-app</code><button>복사</button></div><a class="repo" href="https://github.com/ag-ui-protocol/ag-ui" rel="noopener">github.com/ag-ui-protocol/ag-ui 설명서 열기</a></div>
+<div class="card"><div class="head"><b>5</b><h2>Stitch Design Skills</h2></div><div class="meta"><span>스티치용 스킬 모음</span><span>Apache-2.0</span><span>★ 9,281</span></div><p>구글 스티치용 에이전트 스킬 모음이에요. 스킬은 AI에게 주는 작업 설명서예요.</p><p class="use"><b>이걸로 할 수 있는 일</b> Claude Code나 Cursor에 디자인 스킬 묶음을 설치해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npx skills add google-labs-code/stitch-skills</code><button>복사</button></div><div class="cmd"><code>npx plugins --help
+
+npx skills --help</code><button>복사</button></div><a class="repo" href="https://github.com/google-labs-code/stitch-skills" rel="noopener">github.com/google-labs-code/stitch-skills 설명서 열기</a></div>
+<div class="note">직접 써 보고 쓴 글이 아니라 각 저장소의 공개 설명서를 옮긴 안내예요. 설치 명령은 설명서 원문 그대로라서, 깔기 전에 저장소 설명서와 라이선스를 꼭 직접 확인하세요. 대부분 클로드·GPT 같은 AI 요금제가 따로 필요해요. 이 페이지는 AI로 만들었어요.</div>
+<div class="days">지난 가이드 <a href="../2026-11-15/">11월 15일</a><a href="../2026-11-14/">11월 14일</a><a href="../2026-11-13/">11월 13일</a></div>
+<p class="foot">AI 머니랩 · 오늘의 AI 깃허브 랭킹</p>
+</div>
+<script>document.querySelectorAll('.cmd button').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText(b.previousElementSibling.textContent);b.textContent='복사됨';setTimeout(()=>b.textContent='복사',1200)})</script>
+</body>
+</html>

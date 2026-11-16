@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>11월 15일 AI 깃허브 TOP5 설치·사용 가이드</title>
+<title>11월 16일 AI 깃허브 TOP5 설치·사용 가이드</title>
 <meta name="robots" content="noindex">
-<meta name="guide-day" content="2026-11-15">
+<meta name="guide-day" content="2026-11-16">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>:root{--bg:#0B0F17;--panel:#141A25;--line:#2A3344;--ink:#F4F6FA;--mute:#98A2B3;--accent:#FFC83D}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -29,29 +29,27 @@ h1{font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.02em} h1 em{f
 </head>
 <body><div class="wrap">
 <span class="tag">@ai._.moneylab 가이드</span>
-<h1>11월 15일<br><em>AI 깃허브 TOP5</em> 설치·사용 가이드</h1>
+<h1>11월 16일<br><em>AI 깃허브 TOP5</em> 설치·사용 가이드</h1>
 <p class="sub">영상에서 소개한 순서예요. 명령어 옆 복사를 누르면 복사돼요.</p>
-<div class="card"><div class="head"><b>1</b><h2>아스트릭스</h2></div><div class="meta"><span>AI도 쓰는 화면 부품함</span><span>MIT</span><span>★ 27,813</span></div><p>앱 화면에 쓰는 부품을 한곳에 모아 뒀어요. 사람도 AI도 같은 설명서로 화면을 만들어요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 테마 값을 바꿔 내 브랜드 느낌의 화면 만들기</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npm i -g @astryxdesign/cli</code><button>복사</button></div><div class="cmd"><code>&quot;scripts&quot;: {
-  &quot;astryx&quot;: &quot;node node_modules/@astryxdesign/cli/clients/cli/bin/astryx.mjs&quot;
-}</code><button>복사</button></div><a class="repo" href="https://github.com/meta/astryx" rel="noopener">github.com/meta/astryx 설명서 열기</a></div>
-<div class="card"><div class="head"><b>2</b><h2>오픈 마우스봇</h2></div><div class="meta"><span>채팅방 속 AI 팀</span><span>Apache-2.0</span><span>★ 22,606</span></div><p>채팅 앱 안에 AI 봇 여러 명을 둘 수 있어요. 내 컴퓨터의 클로드나 코덱스가 뒤에서 일해요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 봇마다 성격과 모델을 달리해 채팅으로 일 맡기기</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>git clone https://github.com/milind-soni/OpenMausBot &amp;&amp; cd OpenMausBot
-pnpm install
+<div class="card"><div class="head"><b>1</b><h2>Univer</h2></div><div class="meta"><span>내 앱에 넣는 오피스</span><span>Apache-2.0</span><span>★ 25,599</span></div><p>엑셀 같은 표 편집기를 내 서비스에 넣어 줘요. 사람도 AI 에이전트도 같이 쓸 수 있어요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 내 앱에 스프레드시트 편집기를 넣어 표를 고치게 해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>pnpm add @univerjs/presets @univerjs/preset-sheets-core</code><button>복사</button></div><div class="cmd"><code>&lt;div id=&quot;app&quot; style=&quot;height: 100vh&quot;&gt;&lt;/div&gt;</code><button>복사</button></div><a class="repo" href="https://github.com/dream-num/univer" rel="noopener">github.com/dream-num/univer 설명서 열기</a></div>
+<div class="card"><div class="head"><b>2</b><h2>chrome-devtools-mcp</h2></div><div class="meta"><span>AI가 크롬 조종</span><span>Apache-2.0</span><span>★ 56,908</span></div><p>AI 코딩 도우미가 진짜 크롬 창을 열어 봐요. 화면을 찍고 느려지는 이유도 찾아 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 코딩 에이전트가 켜져 있는 크롬 창을 조종하고 살펴봐요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>{
+  &quot;mcpServers&quot;: {
+    &quot;chrome-devtools&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;chrome-devtools-mcp@latest&quot;]
+    }
+  }
+}</code><button>복사</button></div><div class="cmd"><code>npm i chrome-devtools-mcp@latest -g
+# Example for Claude Code. Use the skills directory of your agent.
+mkdir -p ~/.claude/skills
+cp -R &quot;$(npm root -g)/chrome-devtools-mcp/skills/chrome-devtools-cli&quot; ~/.claude/skills/</code><button>복사</button></div><a class="repo" href="https://github.com/ChromeDevTools/chrome-devtools-mcp" rel="noopener">github.com/ChromeDevTools/chrome-devtools-mcp 설명서 열기</a></div>
+<div class="card"><div class="head"><b>3</b><h2>Claude Trading Skills</h2></div><div class="meta"><span>투자 점검 도우미</span><span>MIT</span><span>★ 5,532</span></div><p>시장 점검과 위험 관리를 정리해 줘요. 사고팔 결정은 직접 내려야 해요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 시장 점검과 매매 계획, 일지를 차례대로 정리해요</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/tradermonty/claude-trading-skills" rel="noopener">github.com/tradermonty/claude-trading-skills 설명서 열기</a></div>
+<div class="card"><div class="head"><b>4</b><h2>AG-UI</h2></div><div class="meta"><span>AI와 앱을 잇는 약속</span><span>MIT</span><span>★ 17,840</span></div><p>AI 에이전트를 사람이 쓰는 앱 화면에 이어 줘요. 둘이 주고받는 방식을 정한 공통 약속이에요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 채팅 화면에 에이전트 답이 실시간으로 흘러 나오게 해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npx create-ag-ui-app my-agent-app</code><button>복사</button></div><a class="repo" href="https://github.com/ag-ui-protocol/ag-ui" rel="noopener">github.com/ag-ui-protocol/ag-ui 설명서 열기</a></div>
+<div class="card"><div class="head"><b>5</b><h2>Stitch Design Skills</h2></div><div class="meta"><span>스티치용 스킬 모음</span><span>Apache-2.0</span><span>★ 9,281</span></div><p>구글 스티치용 에이전트 스킬 모음이에요. 스킬은 AI에게 주는 작업 설명서예요.</p><p class="use"><b>이걸로 할 수 있는 일</b> Claude Code나 Cursor에 디자인 스킬 묶음을 설치해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npx skills add google-labs-code/stitch-skills</code><button>복사</button></div><div class="cmd"><code>npx plugins --help
 
-pnpm dev:server    # harness server → 127.0.0.1:8799
-pnpm dev           # app → http://127.0.0.1:5199
-pnpm dev:desktop   # Electron shell; keep the two commands above running</code><button>복사</button></div><div class="cmd"><code>pnpm package:mac      # macOS: DMG + ZIP; requires Swift/Xcode tools
-pnpm package:win      # Windows: installer + ZIP
-pnpm package:linux    # Ubuntu x64: .deb + AppImage + verified CUA runtime</code><button>복사</button></div><a class="repo" href="https://github.com/milind-soni/OpenMausBot" rel="noopener">github.com/milind-soni/OpenMausBot 설명서 열기</a></div>
-<div class="card"><div class="head"><b>3</b><h2>엘리펀트 골드피시 모델</h2></div><div class="meta"><span>코끼리 설계 금붕어 검토</span><span>Apache-2.0</span><span>★ 18,941</span></div><p>코끼리 역할 AI가 프로젝트 맥락으로 설계 초안을 써요. 금붕어 역할 AI는 이전 대화 없이 초안을 검토해요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 기존 설계 문서를 넣고 코드와 맞는지 검토받기</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/google/elephant-goldfish-model" rel="noopener">github.com/google/elephant-goldfish-model 설명서 열기</a></div>
-<div class="card"><div class="head"><b>4</b><h2>에이전트 브라우저</h2></div><div class="meta"><span>AI가 쓰는 웹 브라우저</span><span>Apache-2.0</span><span>★ 51,022</span></div><p>AI가 웹 브라우저를 명령어로 조종하게 해 줘요. 페이지를 간단한 글로 읽고 버튼도 눌러요.</p><p class="use"><b>이걸로 할 수 있는 일</b> AI에게 페이지를 열어 읽고 링크를 누르게 하기</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npm install -g agent-browser
-agent-browser install           # download Chrome for Testing (first time only)</code><button>복사</button></div><div class="cmd"><code>agent-browser open example.com
-agent-browser snapshot -i       # interactive elements, each with a ref
-agent-browser click @e1         # act on a ref from that snapshot
-agent-browser get url           # check the result
-agent-browser close</code><button>복사</button></div><div class="cmd"><code>- link &quot;Learn more&quot; [ref=e1]</code><button>복사</button></div><a class="repo" href="https://github.com/vercel-labs/agent-browser" rel="noopener">github.com/vercel-labs/agent-browser 설명서 열기</a></div>
-<div class="card"><div class="head"><b>5</b><h2>데일리 스톡 애널리시스</h2></div><div class="meta"><span>매일 오는 주식 리포트</span><span>MIT</span><span>★ 72,162</span></div><p>관심 종목을 AI가 매일 분석해 줘요. 결과는 메신저나 메일로 보내 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 관심 종목을 넣으면 분석 리포트를 메신저로 받기</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/ZhuLinsen/daily_stock_analysis" rel="noopener">github.com/ZhuLinsen/daily_stock_analysis 설명서 열기</a></div>
+npx skills --help</code><button>복사</button></div><a class="repo" href="https://github.com/google-labs-code/stitch-skills" rel="noopener">github.com/google-labs-code/stitch-skills 설명서 열기</a></div>
 <div class="note">직접 써 보고 쓴 글이 아니라 각 저장소의 공개 설명서를 옮긴 안내예요. 설치 명령은 설명서 원문 그대로라서, 깔기 전에 저장소 설명서와 라이선스를 꼭 직접 확인하세요. 대부분 클로드·GPT 같은 AI 요금제가 따로 필요해요. 이 페이지는 AI로 만들었어요.</div>
-<div class="days">지난 가이드 <a href="../2026-11-14/">11월 14일</a><a href="../2026-11-13/">11월 13일</a></div>
+<div class="days">지난 가이드 <a href="../2026-11-15/">11월 15일</a><a href="../2026-11-14/">11월 14일</a><a href="../2026-11-13/">11월 13일</a></div>
 <p class="foot">AI 머니랩 · 오늘의 AI 깃허브 랭킹</p>
 </div>
 <script>document.querySelectorAll('.cmd button').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText(b.previousElementSibling.textContent);b.textContent='복사됨';setTimeout(()=>b.textContent='복사',1200)})</script>
