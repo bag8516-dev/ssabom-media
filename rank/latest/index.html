@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>11월 16일 AI 깃허브 TOP5 설치·사용 가이드</title>
+<title>11월 17일 AI 깃허브 TOP5 설치·사용 가이드</title>
 <meta name="robots" content="noindex">
-<meta name="guide-day" content="2026-11-16">
+<meta name="guide-day" content="2026-11-17">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>:root{--bg:#0B0F17;--panel:#141A25;--line:#2A3344;--ink:#F4F6FA;--mute:#98A2B3;--accent:#FFC83D}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -29,27 +29,26 @@ h1{font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.02em} h1 em{f
 </head>
 <body><div class="wrap">
 <span class="tag">@ai._.moneylab 가이드</span>
-<h1>11월 16일<br><em>AI 깃허브 TOP5</em> 설치·사용 가이드</h1>
+<h1>11월 17일<br><em>AI 깃허브 TOP5</em> 설치·사용 가이드</h1>
 <p class="sub">영상에서 소개한 순서예요. 명령어 옆 복사를 누르면 복사돼요.</p>
-<div class="card"><div class="head"><b>1</b><h2>Univer</h2></div><div class="meta"><span>내 앱에 넣는 오피스</span><span>Apache-2.0</span><span>★ 25,599</span></div><p>엑셀 같은 표 편집기를 내 서비스에 넣어 줘요. 사람도 AI 에이전트도 같이 쓸 수 있어요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 내 앱에 스프레드시트 편집기를 넣어 표를 고치게 해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>pnpm add @univerjs/presets @univerjs/preset-sheets-core</code><button>복사</button></div><div class="cmd"><code>&lt;div id=&quot;app&quot; style=&quot;height: 100vh&quot;&gt;&lt;/div&gt;</code><button>복사</button></div><a class="repo" href="https://github.com/dream-num/univer" rel="noopener">github.com/dream-num/univer 설명서 열기</a></div>
-<div class="card"><div class="head"><b>2</b><h2>chrome-devtools-mcp</h2></div><div class="meta"><span>AI가 크롬 조종</span><span>Apache-2.0</span><span>★ 56,908</span></div><p>AI 코딩 도우미가 진짜 크롬 창을 열어 봐요. 화면을 찍고 느려지는 이유도 찾아 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 코딩 에이전트가 켜져 있는 크롬 창을 조종하고 살펴봐요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>{
-  &quot;mcpServers&quot;: {
-    &quot;chrome-devtools&quot;: {
-      &quot;command&quot;: &quot;npx&quot;,
-      &quot;args&quot;: [&quot;-y&quot;, &quot;chrome-devtools-mcp@latest&quot;]
-    }
-  }
-}</code><button>복사</button></div><div class="cmd"><code>npm i chrome-devtools-mcp@latest -g
-# Example for Claude Code. Use the skills directory of your agent.
-mkdir -p ~/.claude/skills
-cp -R &quot;$(npm root -g)/chrome-devtools-mcp/skills/chrome-devtools-cli&quot; ~/.claude/skills/</code><button>복사</button></div><a class="repo" href="https://github.com/ChromeDevTools/chrome-devtools-mcp" rel="noopener">github.com/ChromeDevTools/chrome-devtools-mcp 설명서 열기</a></div>
-<div class="card"><div class="head"><b>3</b><h2>Claude Trading Skills</h2></div><div class="meta"><span>투자 점검 도우미</span><span>MIT</span><span>★ 5,532</span></div><p>시장 점검과 위험 관리를 정리해 줘요. 사고팔 결정은 직접 내려야 해요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 시장 점검과 매매 계획, 일지를 차례대로 정리해요</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/tradermonty/claude-trading-skills" rel="noopener">github.com/tradermonty/claude-trading-skills 설명서 열기</a></div>
-<div class="card"><div class="head"><b>4</b><h2>AG-UI</h2></div><div class="meta"><span>AI와 앱을 잇는 약속</span><span>MIT</span><span>★ 17,840</span></div><p>AI 에이전트를 사람이 쓰는 앱 화면에 이어 줘요. 둘이 주고받는 방식을 정한 공통 약속이에요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 채팅 화면에 에이전트 답이 실시간으로 흘러 나오게 해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npx create-ag-ui-app my-agent-app</code><button>복사</button></div><a class="repo" href="https://github.com/ag-ui-protocol/ag-ui" rel="noopener">github.com/ag-ui-protocol/ag-ui 설명서 열기</a></div>
-<div class="card"><div class="head"><b>5</b><h2>Stitch Design Skills</h2></div><div class="meta"><span>스티치용 스킬 모음</span><span>Apache-2.0</span><span>★ 9,281</span></div><p>구글 스티치용 에이전트 스킬 모음이에요. 스킬은 AI에게 주는 작업 설명서예요.</p><p class="use"><b>이걸로 할 수 있는 일</b> Claude Code나 Cursor에 디자인 스킬 묶음을 설치해요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>npx skills add google-labs-code/stitch-skills</code><button>복사</button></div><div class="cmd"><code>npx plugins --help
+<div class="card"><div class="head"><b>1</b><h2>claude-bughunter</h2></div><div class="meta"><span>해킹 구멍 찾는 AI</span><span>MIT</span><span>★ 7,795</span></div><p>클로드 코드에 넣는 보안 점검 스킬 묶음이에요. 버그 찾는 전문가처럼 클로드가 움직이게 해 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 테스트 대상을 말로 설명하면 맞는 스킬이 로드돼요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>/plugin marketplace add elementalsouls/Claude-BugHunter
+/plugin install claude-bughunter@elementalsouls</code><button>복사</button></div><div class="cmd"><code>git clone https://github.com/elementalsouls/Claude-BugHunter.git
+cd Claude-BugHunter</code><button>복사</button></div><div class="cmd"><code># macOS / Linux
+bash scripts/install.sh
 
-npx skills --help</code><button>복사</button></div><a class="repo" href="https://github.com/google-labs-code/stitch-skills" rel="noopener">github.com/google-labs-code/stitch-skills 설명서 열기</a></div>
+# Windows (PowerShell)
+pwsh ./scripts/install.ps1</code><button>복사</button></div><a class="repo" href="https://github.com/elementalsouls/Claude-BugHunter" rel="noopener">github.com/elementalsouls/Claude-BugHunter 설명서 열기</a></div>
+<div class="card"><div class="head"><b>2</b><h2>SkillEvaluator</h2></div><div class="meta"><span>스킬 점수 매기는 도구</span><span>Apache-2.0</span><span>★ 3,017</span></div><p>AI 에이전트 스킬이 쓸 만한지 검사해 줘요. 스킬이 있을 때와 없을 때를 비교해 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 만든 스킬 폴더를 넣으면 품질 검사 결과를 받아요</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/NVIDIA/SkillEvaluator" rel="noopener">github.com/NVIDIA/SkillEvaluator 설명서 열기</a></div>
+<div class="card"><div class="head"><b>3</b><h2>ffmpeg-skill</h2></div><div class="meta"><span>영상 편집하는 AI</span><span>MIT</span><span>★ 7,254</span></div><p>코딩 에이전트에게 영상 편집기를 달아 줘요. 내 컴퓨터 안에서 자르고 자막도 넣어요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 영상을 넣으면 자르고 자막 붙인 파일을 얻어요</p><div class="step">저장소 설명서에 적힌 설치 명령 (원문 그대로)</div><div class="cmd"><code>/plugin install ffmpeg-skill --marketplace kajisho5/ffmpeg-skill      # in Claude Code 2.1.275 or later
+claude plugin marketplace add kajisho5/ffmpeg-skill --sparse .claude-plugin   # 2.1.69 to 2.1.274: add the marketplace,
+claude plugin install ffmpeg-skill@ffmpeg-skill                               # then install from it</code><button>복사</button></div><div class="cmd"><code>codex plugin marketplace add kajisho5/ffmpeg-skill --sparse .claude-plugin   # Codex: add the marketplace,
+codex plugin add ffmpeg-skill@ffmpeg-skill                                   # then the plugin
+gemini extensions install https://github.com/kajisho5/ffmpeg-skill   # Gemini CLI (clones the whole repository, see below)</code><button>복사</button></div><div class="cmd"><code>npx ffmpeg-skill doctor           # every required FFmpeg component present?
+npx ffmpeg-skill contract --json  # what the agent framework will see</code><button>복사</button></div><a class="repo" href="https://github.com/kajisho5/ffmpeg-skill" rel="noopener">github.com/kajisho5/ffmpeg-skill 설명서 열기</a></div>
+<div class="card"><div class="head"><b>4</b><h2>PaperOrchestra</h2></div><div class="meta"><span>논문 써 주는 AI 팀</span><span>Apache-2.0</span><span>★ 1,882</span></div><p>아이디어와 실험 기록을 논문 원고로 바꿔요. 역할 나눈 AI 여럿이 함께 써 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 실험 기록을 넣으면 제출용 논문 원고가 나와요</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/google-research/paper-orchestra" rel="noopener">github.com/google-research/paper-orchestra 설명서 열기</a></div>
+<div class="card"><div class="head"><b>5</b><h2>last30days</h2></div><div class="meta"><span>요즘 얘기 모아 주는 AI</span><span>MIT</span><span>★ 68,395</span></div><p>주제 하나를 레딧과 유튜브에서 찾아 줘요. 사람들 반응을 모아 한 장으로 정리해 줘요.</p><p class="use"><b>이걸로 할 수 있는 일</b> 궁금한 주제를 넣으면 여러 사이트 요약을 얻어요</p><div class="step">설치 방법은 아래 저장소 설명서의 Install·Quick start 부분에 있어요</div><a class="repo" href="https://github.com/mvanhorn/last30days-skill" rel="noopener">github.com/mvanhorn/last30days-skill 설명서 열기</a></div>
 <div class="note">직접 써 보고 쓴 글이 아니라 각 저장소의 공개 설명서를 옮긴 안내예요. 설치 명령은 설명서 원문 그대로라서, 깔기 전에 저장소 설명서와 라이선스를 꼭 직접 확인하세요. 대부분 클로드·GPT 같은 AI 요금제가 따로 필요해요. 이 페이지는 AI로 만들었어요.</div>
-<div class="days">지난 가이드 <a href="../2026-11-15/">11월 15일</a><a href="../2026-11-14/">11월 14일</a><a href="../2026-11-13/">11월 13일</a></div>
+<div class="days">지난 가이드 <a href="../2026-11-16/">11월 16일</a><a href="../2026-11-15/">11월 15일</a><a href="../2026-11-14/">11월 14일</a><a href="../2026-11-13/">11월 13일</a></div>
 <p class="foot">AI 머니랩 · 오늘의 AI 깃허브 랭킹</p>
 </div>
 <script>document.querySelectorAll('.cmd button').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText(b.previousElementSibling.textContent);b.textContent='복사됨';setTimeout(()=>b.textContent='복사',1200)})</script>
