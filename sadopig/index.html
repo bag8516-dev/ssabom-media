@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사도돼지 만든 방법</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#0B0F17;--panel:#141A25;--line:#2A3344;--ink:#F4F6FA;--mute:#98A2B3;--accent:#FF8FB1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7;word-break:keep-all;
+ background-image:radial-gradient(600px 400px at 100% 0,rgba(255,143,177,.12),transparent 60%)}
+.wrap{max-width:640px;margin:0 auto;padding:36px 16px 56px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:3px 12px;margin-bottom:14px}
+h1{font-size:30px;line-height:1.28;font-weight:800;letter-spacing:-.02em} h1 em{font-style:normal;color:var(--accent)}
+.sub{color:#D5DBE5;font-size:17px;margin:14px 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:18px}
+.shot{display:block;width:100%;height:auto;border-bottom:1px solid var(--line);background:#fff}
+.body{padding:18px 18px 20px}
+.head{display:flex;align-items:center;gap:10px;margin-bottom:8px} .head b{background:var(--accent);color:var(--bg);border-radius:8px;padding:1px 9px;font-size:16px}
+.head h2{font-size:21px;font-weight:800;letter-spacing:-.01em}
+.body p,.body li{font-size:17px;color:#D5DBE5;margin-bottom:8px} .body ul{padding-left:20px}
+.say{display:inline-block;background:#0B0F17;border:1px solid var(--line);border-radius:10px;padding:1px 9px;color:var(--ink)}
+.num{display:flex;gap:10px;margin:6px 0 4px} .num div{flex:1;background:#0B0F17;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.num strong{display:block;font-size:26px;color:var(--accent)} .num span{font-size:14px;color:var(--mute)}
+.go{display:block;text-align:center;background:var(--accent);color:var(--bg);border-radius:12px;font-weight:800;font-size:17px;padding:13px;text-decoration:none;margin-top:10px}
+.foot{color:#7C8696;font-size:14px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body><div class="wrap">
+<span class="tag">@ai._.moneylab 가이드</span>
+<h1>코드 없이 말로 시켜서 만든<br>토스 앱 <em>사도돼지</em></h1>
+<p class="sub">사고 싶은 물건을 넣으면 판사 돼지가 판결을 내려 주는 앱이에요. 코드는 전부 Claude Code가 썼고, 저는 말로 시키고 폰으로 눌러 봤어요. 시킨 순서대로 적었어요.</p>
+
+<div class="card"><img class="shot" src="card.jpg" alt="사도돼지 판결문 화면. 38만 9천 원짜리 겨울 롱패딩이 노동 33시간이라며 기각 도장이 찍혀 있다"><div class="body">
+<p>11월 12일에 무엇을 만들지 정했고, 11월 13일 저녁에 토스에 출시했어요.</p>
+<div class="num"><div><strong>1,243명</strong><span>11월 16일 새로 온 사람</span></div><div><strong>993명</strong><span>11월 17일 새로 온 사람</span></div></div>
+<p style="font-size:14px;color:var(--mute)">토스 개발자 콘솔에 나온 숫자예요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>1</b><h2>무엇을 만들지 정하기</h2></div>
+<p>토스 안에서 돌아가는 작은 앱(앱인토스)으로 뭘 만들면 좋을지 먼저 조사를 시켰어요.</p>
+<p>조사 1등은 출근 관련 앱이었는데 끌리지 않았어요. 웃기고 친구한테 보내고 싶은 쪽으로 다시 골랐어요.</p>
+<p>정한 건 충동구매를 재판하는 앱이에요. 몇 시간 일해야 버는 돈인지 보여 주고, 참으면 돼지가 커요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>2</b><h2>화면 만들기</h2></div>
+<p>토스가 내놓은 앱 틀로 시작했어요. 돼지 그림은 AI로 그렸고, 몇 가지 시안 중에 점토 인형 느낌을 골랐어요.</p>
+<p>고칠 곳은 화면을 보고 말로 했어요. 옷을 하나씩 겹쳐 입히니 어색해서 <span class="say">세트로 해</span>라고 했고, 랭킹 기간도 일주일은 짧다고 하니 한 달로 바뀌었어요.</p>
+<p>로고도 처음 것은 마음에 안 들어서 다시 그리게 했어요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>3</b><h2>판결 문장</h2></div>
+<p>판결은 AI가 그때그때 지어내는 게 아니에요. 미리 써 둔 문장 틀을 물건 종류와 시간에 맞게 골라 붙여요. 결과는 무죄, 집행유예, 기각, 중형 중 하나예요.</p>
+<p>친구들에게 써 보라고 했더니 목도리에 옷장 얘기가 나오고, 세일이라고 한 적도 없는데 세일 얘기가 나왔어요. 그 말을 그대로 전해서 세 번 고쳤어요.</p>
+<p>그 뒤로는 문장을 바꿀 때마다 모든 물건에 붙여 보는 검사를 Claude가 먼저 돌려요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>4</b><h2>서버 (Cloudflare)</h2></div>
+<p>친구에게 투표를 받는 배심원 기능과 돼지 랭킹은 서버가 있어야 해요. Cloudflare의 서버(Workers)와 데이터베이스(D1)를 쓰게 했어요.</p>
+<p>Cloudflare 로그인은 제가 했고, 만들고 올리는 건 Claude가 했어요. 전화번호나 이메일 같은 개인 정보는 받지 않아요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>5</b><h2>토스에 등록하고 검토 받기</h2></div>
+<p>토스 개발자 콘솔에 앱 파일을 올리고 등록 양식을 채우는 일도 Claude가 크롬 화면에서 했어요. 약속 항목에 체크하고 검토를 요청하는 버튼은 제가 눌렀어요.</p>
+<p>앱 파일은 10MB를 넘으면 안 올라가요. 글꼴 파일을 줄여서 11.4MB를 6.8MB로 맞췄어요.</p>
+<p>파일만 올리고 '임시저장'을 안 누르면 검토에 그 버전이 안 들어가요. 저희도 한 번 헷갈렸어요.</p>
+<p>광고 수익이나 결제를 받으려면 사업자 등록이 필요해요. 이건 직접 해야 해요.</p></div></div>
+
+<div class="card"><div class="body">
+<div class="head"><b>6</b><h2>광고와 결제, 그리고 반려</h2></div>
+<p>광고를 끝까지 보면 재판을 한 번 더 받을 수 있게 했어요. 11월 16일에는 돼지 꾸미기 옷을 550원부터 파는 결제도 붙였어요.</p>
+<p>11월 17일에 낸 버전은 반려됐어요. 앱 파일 안에 시험용 광고 번호가 들어 있다는 이유였어요.</p>
+<p>시험용 번호는 시험할 때 만드는 파일에만 들어가게 바꿔 달라고 했어요. 다시 낸 버전은 그날 저녁 통과했어요.</p></div></div>
+
+<div class="card"><img class="shot" src="intro.jpg" alt="사도돼지 첫 화면. 판사 돼지 그림 아래에 무선 이어폰, 겨울 롱패딩, 배달 치킨, 새 운동화 예시 버튼이 있다"><div class="body">
+<div class="head"><b>+</b><h2>직접 해 보기</h2></div>
+<p>토스 앱에서 '사도돼지'를 검색하거나 아래 버튼을 누르면 열려요.</p>
+<a class="go" href="https://minion.toss.im/NIR4La7q" rel="noopener">사도돼지 열기</a></div></div>
+
+<p class="foot">AI가 만드는 결과는 시킬 때마다 조금씩 달라요. 같은 말을 해도 똑같은 앱이 나오지는 않아요.<br>토스, Anthropic, Cloudflare와 제휴는 없어요. 이 페이지는 AI의 도움을 받아 만들었어요.</p>
+</div>
+</body>
+</html>
